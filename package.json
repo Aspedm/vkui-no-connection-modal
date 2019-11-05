@@ -1,0 +1,61 @@
+{
+	"name": "vkui-no-connection-modal",
+	"version": "0.0.1",
+	"main": "lib/NoConnectionModal.js",
+	"module": "lib/NoConnectionModal.es.js",
+	"license": "UNLICENSED",
+	"author": "Asped <aspedm@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Aspedm/vkui-no-connection-modal.git"
+	},
+	"homepage": "https://github.com/Aspedm/vkui-no-connection-modal#readme",
+	"keywords": [
+		"react",
+		"vkui"
+	],
+	"scripts": {
+		"start": "npm-run-all build --parallel start:storybook",
+		"build": "rollup --config",
+		"start:storybook": "start-storybook -p 6006 -c .storybook",
+		"build:storybook": "build-storybook --output-dir dist",
+		"format": "prettier ./src/*.js --write",
+		"lint": "eslint ./src/*.js",
+		"prepublish": "yarn build"
+	},
+	"dependencies": {
+		"@vkontakte/icons": "^1.11.0",
+		"@vkontakte/vk-connect": "^1.6.8",
+		"@vkontakte/vkui": "^2.32.4",
+		"prop-types": "^15.7.2"
+	},
+	"peerDependencies": {
+		"react": "^16.11.0",
+		"react-dom": "^16.11.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.6.4",
+		"@babel/preset-env": "^7.6.3",
+		"@babel/preset-react": "^7.6.3",
+		"@storybook/react": "^5.2.5",
+		"babel-loader": "^8.0.6",
+		"eslint": "^6.6.0",
+		"eslint-config-airbnb": "18.0.1",
+		"eslint-config-prettier": "^6.5.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-react": "^7.16.0",
+		"lint-staged": "^9.4.2",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^1.16.4",
+		"react": "^16.11.0",
+		"react-dom": "^16.11.0",
+		"rollup": "^1.26.3",
+		"rollup-plugin-babel": "^4.3.3",
+		"rollup-plugin-peer-deps-external": "^2.2.0",
+		"rollup-plugin-terser": "^5.1.2"
+	},
+	"files": [
+		"lib/"
+	]
+}
