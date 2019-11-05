@@ -1,5 +1,5 @@
  <div align="center">
-    <img align="center" width="180" src="./readme_assets/no-connection.gif" />
+    <img align="center" width="180" src="https://github.com/Aspedm/vkui-no-connection-modal/raw/master/readme_assets/no-connection.gif" />
     <h2>VKUI NO INTERNET MODAL</h2>
     <blockquote>
         Simple UI component for show network status. Component based on <a href="https://github.com/VKCOM/VKUI">VKUI</a> and designed for vk mini apps.
@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-    <img align="center" width="360" src="./readme_assets/preview.gif" />
+    <img align="center" width="360" src="https://github.com/Aspedm/vkui-no-connection-modal/raw/master/readme_assets/preview.gif" />
 </div>
 
 ## Features
@@ -18,13 +18,14 @@
 ## Install
 
 ```sh
-yarn add vkui-no-connetction-modal
+yarn add vkui-no-connection-modal
 ```
 
 ## Example
 
 ```javascript
-import NoConnectionModal, { useConnection } from 'vkui-no-connetction-modal';
+import NoConnectionModal from 'vkui-no-connection-modal';
+import useConnection from 'vkui-no-connection-modal/lib/useConnection';
 
 const YourView = () => {
     const [modal, setModal] = useState(null);
