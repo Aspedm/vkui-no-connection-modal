@@ -28,7 +28,7 @@ const ConnectionDetectModal = ({ title, caption, actionText, onClose }) => {
 	};
 
 	return (
-		<ModalRoot activeModal={MODAL_INFO_ID}>
+		<ModalRoot activeModal={MODAL_INFO_ID} onClose={checkConnection}>
 			<ModalCard
 				id={MODAL_INFO_ID}
 				onClose={checkConnection}
