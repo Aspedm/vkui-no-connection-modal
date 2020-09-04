@@ -151,24 +151,6 @@ storiesOf("No internet modal", module).add("Themes supported", () => {
 					<List>
 						<Cell>
 							<Button
-								onClick={() => changeTheme('client_light')}
-								stretched={true}
-								size="xl"
-							>
-								Client light
-							</Button>
-						</Cell>
-						<Cell>
-							<Button
-								onClick={() => changeTheme('client_dark')}
-								stretched={true}
-								size="xl"
-							>
-								Client dark
-							</Button>
-						</Cell>
-						<Cell>
-							<Button
 								onClick={() => changeTheme('bright_light')}
 								stretched={true}
 								size="xl"
