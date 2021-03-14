@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.0.0 (Sep 4th, 2020)
+
+Changes:
+  - Update VK libs
+  - Add typescript
+  - !BREAKING CHANGE! Change custom text props
+
 ## 0.1.1 (Sep 4th, 2020)
 
 Changes:

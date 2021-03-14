@@ -58,8 +58,8 @@ You can passed options for component:
 
 | Name          | Type     | Description | Default |
 |---------------|----------|-------------|---------|
-|`title`        | string   | Modal title | 'No internet'|
-|`caption`      | string   | Modal description  | 'Checking the network cables, modem and router.' |
+|`header`       | string   | Modal title | 'No internet'|
+|`subHeader`    | string   | Modal description  | 'Checking the network cables, modem and router.' |
 |`actionText`   | string   | Button text | 'Try again' |
 |`onClose`      | function | Close modal function | **Required** |
 
