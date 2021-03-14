@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
 
-const UseConnection = () => {
-	const [status, setStatus] = useState(navigator.onLine);
+/**
+ * @returns {boolean}
+ */
+const UseConnection = (): boolean => {
+	const [status, setStatus] = useState<boolean>(navigator.onLine);
 
-	const onChange = () => {
+	/**
+	 * @returns {void}
+	 */
+	const onChange = (): void => {
 		setStatus(navigator.onLine);
 	};
 
