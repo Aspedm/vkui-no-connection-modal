@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import React, { useState, useEffect } from 'react';
-import { View, Panel, PanelHeader, Group, List, Cell, Button } from '@vkontakte/vkui';
+import { View, Panel, PanelHeader, Group, List, Cell, Button, Header, Div } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
 import NoConnectionModal from '../lib/NoConnectionModal.es';
@@ -31,13 +31,13 @@ storiesOf("No internet modal", module).add("Default props", () => {
 							1. Open browser developer tools
 						</Cell>
 						<Cell>
-							2. Open "Network" tab
+							2. Open «Network» tab
 						</Cell>
 						<Cell>
-							3. Open "Throttling"
+							3. Open «Throttling»
 						</Cell>
 						<Cell>
-							4. Select "Offline" option
+							4. Select «Offline» option
 						</Cell>
 					</List>
 				</Group>
@@ -54,8 +54,8 @@ storiesOf("No internet modal", module).add("Custom props", () => {
 	useEffect(() => {
 		if (!isOnline) return setModal(
 			<NoConnectionModal 
-				title="Нет сети"
-				caption="Похоже, что у Вас проблемы с интернет соединением."
+				header="Нет сети"
+				subHeader="Похоже, что у Вас проблемы с интернет соединением."
 				actionText="Проверить соединение"
 				onClose={() => setModal(null)}
 			/>
@@ -75,18 +75,18 @@ storiesOf("No internet modal", module).add("Custom props", () => {
 							1. Open browser developer tools
 						</Cell>
 						<Cell>
-							2. Open "Network" tab
+							2. Open «Network» tab
 						</Cell>
 						<Cell>
-							3. Open "Throttling"
+							3. Open «Throttling»
 						</Cell>
 						<Cell>
-							4. Select "Offline" option
+							4. Select «Offline» option
 						</Cell>
 					</List>
 				</Group>
 
-				<Group title="Custom props">
+				<Group header={<Header mode="secondary">Custom props</Header>}>
 					<List>
 						<Cell>
 							title="Нет сети"
@@ -136,38 +136,22 @@ storiesOf("No internet modal", module).add("Themes supported", () => {
 							1. Open browser developer tools
 						</Cell>
 						<Cell>
-							2. Open "Network" tab
+							2. Open «Network» tab
 						</Cell>
 						<Cell>
-							3. Open "Throttling"
+							3. Open «Throttling»
 						</Cell>
 						<Cell>
-							4. Select "Offline" option
+							4. Select «Offline» option
 						</Cell>
 					</List>
 				</Group>
 
-				<Group title="Support themes">
-					<List>
-						<Cell>
-							<Button
-								onClick={() => changeTheme('bright_light')}
-								stretched={true}
-								size="xl"
-							>
-								Bright light
-							</Button>
-							</Cell>
-						<Cell>
-							<Button
-								onClick={() => changeTheme('space_gray')}
-								stretched={true}
-								size="xl"
-							>
-								Space gray
-							</Button>
-						</Cell>
-					</List>
+				<Group header={<Header mode="secondary">Support themes</Header>}>
+					<Div style={{display: 'flex'}}>
+						<Button size="l" stretched style={{ marginRight: 8 }} onClick={() => changeTheme('bright_light')}>Bright light</Button>
+						<Button size="l" stretched mode="secondary" onClick={() => changeTheme('space_gray')}>Space gray</Button>
+					</Div>
 				</Group>
 			</Panel>
 		</View>
